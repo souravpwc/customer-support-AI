@@ -1,0 +1,72 @@
+{
+  "SVC-TAG-001": {
+    "service_tag": "SVC-TAG-001",
+    "product_name": "NovaBook XPS 15",
+    "model": "NB-XPS15-32-1TB",
+    "purchase_date": "2025-03-15",
+    "warranty_end_date": "2026-03-14",
+    "battery_warranty_end": "2026-03-14",
+    "warranty_type": "Standard Limited Warranty",
+    "addons": ["Accidental Damage Service"],
+    "status": "Active",
+    "customer_id": "CUST-001",
+    "customer_name": "Alice Johnson",
+    "service_level": "Carry-In/Mail-In Depot"
+  },
+  "SVC-TAG-002": {
+    "service_tag": "SVC-TAG-002",
+    "product_name": "WorkStation Pro T9",
+    "model": "WS-T9-64-2TB",
+    "purchase_date": "2024-01-10",
+    "warranty_end_date": "2027-01-09",
+    "battery_warranty_end": null,
+    "warranty_type": "ProSupport 3-Year On-Site",
+    "addons": ["ProSupport Plus", "Keep Your Hard Drive"],
+    "status": "Active",
+    "customer_id": "CUST-004",
+    "customer_name": "David Chen",
+    "service_level": "On-Site Next Business Day"
+  },
+  "SVC-TAG-003": {
+    "service_tag": "SVC-TAG-003",
+    "product_name": "NovaBook Air 13",
+    "model": "NB-AIR13-8-256",
+    "purchase_date": "2023-06-01",
+    "warranty_end_date": "2024-05-31",
+    "battery_warranty_end": "2024-05-31",
+    "warranty_type": "Standard Limited Warranty",
+    "addons": [],
+    "status": "Expired",
+    "customer_id": "CUST-003",
+    "customer_name": "Carol Smith",
+    "service_level": "Carry-In/Mail-In Depot"
+  },
+  "SVC-TAG-004": {
+    "service_tag": "SVC-TAG-004",
+    "product_name": "UltraView 27 4K Monitor",
+    "model": "MON-UV27-4K",
+    "purchase_date": "2026-05-20",
+    "warranty_end_date": "2029-05-19",
+    "battery_warranty_end": null,
+    "warranty_type": "3-Year Advance Exchange",
+    "addons": [],
+    "status": "Active",
+    "customer_id": "CUST-002",
+    "customer_name": "Bob Martinez",
+    "service_level": "Advance Exchange"
+  },
+  "SVC-TAG-005": {
+    "service_tag": "SVC-TAG-005",
+    "product_name": "NovaEdge MX Server",
+    "model": "SVR-NXMX-256",
+    "purchase_date": "2025-01-01",
+    "warranty_end_date": "2028-01-01",
+    "battery_warranty_end": null,
+    "warranty_type": "ProSupport 3-Year 9x5 NBD On-Site",
+    "addons": ["ProSupport Plus"],
+    "status": "Active",
+    "customer_id": "CUST-006",
+    "customer_name": "Franklin Industries",
+    "service_level": "On-Site Next Business Day"
+  }
+}

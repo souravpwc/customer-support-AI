@@ -1,0 +1,70 @@
+{
+  "TN-100001": {
+    "order_id": "TN-100001",
+    "customer_id": "CUST-001",
+    "customer_name": "Alice Johnson",
+    "items": [{"sku": "NB-XPS15-32-1TB", "name": "NovaBook XPS 15 (32GB/1TB)", "qty": 1, "price": 1899.99}],
+    "total": 1899.99,
+    "status": "Shipped",
+    "carrier": "FedEx",
+    "tracking_number": "794600128888",
+    "estimated_delivery": "2026-05-28",
+    "order_date": "2026-05-22",
+    "shipping_address": "123 Maple Ave, Austin, TX 78701"
+  },
+  "TN-100002": {
+    "order_id": "TN-100002",
+    "customer_id": "CUST-002",
+    "customer_name": "Bob Martinez",
+    "items": [{"sku": "MON-UV27-4K", "name": "UltraView 27 4K Monitor", "qty": 2, "price": 699.99}],
+    "total": 1399.98,
+    "status": "Delivered",
+    "carrier": "UPS",
+    "tracking_number": "1Z999AA10123456784",
+    "estimated_delivery": "2026-05-20",
+    "order_date": "2026-05-15",
+    "shipping_address": "456 Oak St, Seattle, WA 98101"
+  },
+  "TN-100003": {
+    "order_id": "TN-100003",
+    "customer_id": "CUST-003",
+    "customer_name": "Carol Smith",
+    "items": [{"sku": "NB-AIR13-16-512", "name": "NovaBook Air 13 (16GB/512GB)", "qty": 1, "price": 1099.99}],
+    "total": 1099.99,
+    "status": "Processing",
+    "carrier": null,
+    "tracking_number": null,
+    "estimated_delivery": "2026-06-01",
+    "order_date": "2026-05-25",
+    "shipping_address": "789 Pine Rd, Chicago, IL 60601"
+  },
+  "TN-100004": {
+    "order_id": "TN-100004",
+    "customer_id": "CUST-004",
+    "customer_name": "David Chen",
+    "items": [
+      {"sku": "WS-T9-64-2TB", "name": "WorkStation Pro T9 (64GB/2TB)", "qty": 1, "price": 3499.99},
+      {"sku": "MON-PV32-QHD", "name": "ProView 32 QHD Monitor", "qty": 1, "price": 899.99}
+    ],
+    "total": 4399.98,
+    "status": "Out for Delivery",
+    "carrier": "FedEx",
+    "tracking_number": "794600128999",
+    "estimated_delivery": "2026-05-26",
+    "order_date": "2026-05-19",
+    "shipping_address": "321 Elm Dr, New York, NY 10001"
+  },
+  "TN-100005": {
+    "order_id": "TN-100005",
+    "customer_id": "CUST-005",
+    "customer_name": "Emma Wilson",
+    "items": [{"sku": "NB-PRO14-16-512", "name": "NovaBook Pro 14 (16GB/512GB)", "qty": 1, "price": 1499.99}],
+    "total": 1499.99,
+    "status": "Cancelled",
+    "carrier": null,
+    "tracking_number": null,
+    "estimated_delivery": null,
+    "order_date": "2026-05-18",
+    "shipping_address": "654 Birch Ln, Miami, FL 33101"
+  }
+}

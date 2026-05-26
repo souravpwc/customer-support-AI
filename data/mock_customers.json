@@ -1,0 +1,57 @@
+{
+  "CUST-001": {
+    "customer_id": "CUST-001",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@email.com",
+    "phone": "512-555-0101",
+    "tier": "Premium",
+    "registered": "2023-02-10",
+    "total_orders": 5,
+    "open_tickets": 0,
+    "devices": ["SVC-TAG-001"]
+  },
+  "CUST-002": {
+    "customer_id": "CUST-002",
+    "name": "Bob Martinez",
+    "email": "bob.m@techcorp.com",
+    "phone": "206-555-0202",
+    "tier": "Business",
+    "registered": "2022-08-05",
+    "total_orders": 12,
+    "open_tickets": 1,
+    "devices": ["SVC-TAG-004"]
+  },
+  "CUST-003": {
+    "customer_id": "CUST-003",
+    "name": "Carol Smith",
+    "email": "carol.smith@email.com",
+    "phone": "312-555-0303",
+    "tier": "Standard",
+    "registered": "2023-06-01",
+    "total_orders": 2,
+    "open_tickets": 0,
+    "devices": ["SVC-TAG-003"]
+  },
+  "CUST-004": {
+    "customer_id": "CUST-004",
+    "name": "David Chen",
+    "email": "david.chen@devstudio.io",
+    "phone": "212-555-0404",
+    "tier": "Enterprise",
+    "registered": "2021-11-20",
+    "total_orders": 28,
+    "open_tickets": 2,
+    "devices": ["SVC-TAG-002"]
+  },
+  "CUST-005": {
+    "customer_id": "CUST-005",
+    "name": "Emma Wilson",
+    "email": "emma.w@email.com",
+    "phone": "305-555-0505",
+    "tier": "Standard",
+    "registered": "2024-01-15",
+    "total_orders": 1,
+    "open_tickets": 0,
+    "devices": []
+  }
+}

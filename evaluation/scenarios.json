@@ -1,0 +1,114 @@
+[
+  {
+    "id": "S001",
+    "name": "Order Tracking",
+    "description": "Customer wants to track their recent order",
+    "category": "order_status",
+    "user_message": "Hi, I ordered a NovaBook XPS 15 last week. My order number is TN-100001. Can you tell me where it is?",
+    "expected_intent": "order_status",
+    "expected_entities": {"order_id": "TN-100001"},
+    "requires_api": ["order"],
+    "expected_resolution": "self_service"
+  },
+  {
+    "id": "S002",
+    "name": "Warranty Verification",
+    "description": "Customer checks if device is under warranty before repair",
+    "category": "warranty_check",
+    "user_message": "I need to get my laptop screen repaired. My service tag is SVC-TAG-001. Am I still under warranty?",
+    "expected_intent": "warranty_check",
+    "expected_entities": {"service_tag": "SVC-TAG-001"},
+    "requires_api": ["warranty"],
+    "expected_resolution": "self_service"
+  },
+  {
+    "id": "S003",
+    "name": "Laptop Won't Boot",
+    "description": "Customer's laptop has no power and won't turn on",
+    "category": "troubleshooting",
+    "user_message": "My NovaBook XPS 15 won't turn on at all. There are no lights, no fan noise, nothing happens when I press the power button.",
+    "expected_intent": "troubleshooting",
+    "expected_entities": {"product_name": "NovaBook XPS 15", "issue_type": "no power"},
+    "requires_api": [],
+    "expected_resolution": "guided_troubleshooting"
+  },
+  {
+    "id": "S004",
+    "name": "Battery Swelling Safety Issue",
+    "description": "Customer reports swollen battery — safety escalation required",
+    "category": "troubleshooting",
+    "user_message": "My laptop battery looks swollen and the bottom case is bulging out. What should I do?",
+    "expected_intent": "troubleshooting",
+    "expected_entities": {"issue_type": "battery swelling"},
+    "requires_api": [],
+    "expected_resolution": "escalation",
+    "is_safety_issue": true
+  },
+  {
+    "id": "S005",
+    "name": "Return Request",
+    "description": "Customer wants to return a recently purchased item",
+    "category": "return_refund",
+    "user_message": "I received my NovaBook Air 13 yesterday and I want to return it. It's not what I expected. How do I start a return?",
+    "expected_intent": "return_refund",
+    "expected_entities": {"product_name": "NovaBook Air 13"},
+    "requires_api": [],
+    "expected_resolution": "self_service"
+  },
+  {
+    "id": "S006",
+    "name": "Expired Warranty Repair",
+    "description": "Customer with expired warranty needs repair options",
+    "category": "warranty_check",
+    "user_message": "My service tag is SVC-TAG-003. My laptop has a broken keyboard. Is it covered?",
+    "expected_intent": "warranty_check",
+    "expected_entities": {"service_tag": "SVC-TAG-003"},
+    "requires_api": ["warranty"],
+    "expected_resolution": "out_of_warranty_options"
+  },
+  {
+    "id": "S007",
+    "name": "Driver Installation Help",
+    "description": "Customer reinstalled Windows and lost drivers",
+    "category": "troubleshooting",
+    "user_message": "I reinstalled Windows on my NovaBook Pro 14 and now Wi-Fi doesn't work. I can't find the drivers.",
+    "expected_intent": "troubleshooting",
+    "expected_entities": {"product_name": "NovaBook Pro 14", "issue_type": "driver installation wifi"},
+    "requires_api": [],
+    "expected_resolution": "self_service"
+  },
+  {
+    "id": "S008",
+    "name": "Explicit Escalation Request",
+    "description": "Frustrated customer explicitly requests human agent",
+    "category": "escalation_request",
+    "user_message": "I've been trying to get this issue resolved for a week. Please escalate this to a manager immediately.",
+    "expected_intent": "escalation_request",
+    "expected_entities": {},
+    "requires_api": ["ticket"],
+    "expected_resolution": "escalation"
+  },
+  {
+    "id": "S009",
+    "name": "Product Comparison",
+    "description": "Customer comparing two laptop models",
+    "category": "product_info",
+    "user_message": "What's the difference between the NovaBook Air 13 and the NovaBook Pro 14? Which one is better for video editing?",
+    "expected_intent": "product_info",
+    "expected_entities": {},
+    "requires_api": [],
+    "expected_resolution": "self_service"
+  },
+  {
+    "id": "S010",
+    "name": "Server Outage Enterprise Escalation",
+    "description": "Enterprise customer reporting critical server issue",
+    "category": "troubleshooting",
+    "user_message": "Our NovaEdge server went down unexpectedly and we've lost access to all our databases. This is a critical production outage.",
+    "expected_intent": "troubleshooting",
+    "expected_entities": {"product_name": "NovaEdge server", "issue_type": "server outage"},
+    "requires_api": ["ticket"],
+    "expected_resolution": "escalation",
+    "is_critical": true
+  }
+]

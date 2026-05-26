@@ -1,0 +1,13 @@
+langgraph
+langchain-openai
+langchain-core
+openai
+pydantic
+python-dotenv
+pandas
+ipykernel
+truststore
+streamlit
+plotly
+numpy
+scikit-learn
