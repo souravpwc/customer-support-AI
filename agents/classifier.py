@@ -94,9 +94,37 @@ Classify the CURRENT user message."""
         if m:
             entities["service_tag"] = m.group().upper()
 
-    return {
-        **state,
+    # Keyword fallback / reinforcement for explicit escalation requests.
+    # The LLM sometimes mis-routes clear "talk to a human" messages, so we
+    # double-check with a regex and upgrade the intent if needed.
+    _ESCALATION_PATTERNS = (
+        r"\b(human|live|real)\s+(agent|person|support|rep(resentative)?)\b",
+        r"\bspeak\s+(to|with)\s+(a|an)?\s*(human|person|agent|manager)\b",
+        r"\btalk\s+(to|with)\s+(a|an)?\s*(human|person|agent|manager)\b",
+        r"\bescalat(e|ion|ed)\b",
+        r"\btransfer\s+me\b",
+        r"\bconnect\s+me\s+(to|with)\b",
+    )
+    if any(re.search(p, user_message, re.IGNORECASE) for p in _ESCALATION_PATTERNS):
+        intent = "escalation_request"
+        confidence = max(confidence, 0.9)
+
+    updates: dict = {
         "intent": intent,
         "intent_confidence": confidence,
         "entities": {k: v for k, v in entities.items() if v},
     }
+
+    # CRITICAL: when the customer explicitly asks for a human, force the
+    # escalation branch so a ticket is created and the admin dashboard
+    # picks it up. Without this, escalation only fires when the response
+    # confidence falls below ESCALATION_THRESHOLD, which rarely happens
+    # for a polite "please escalate" reply.
+    if intent == "escalation_request":
+        updates["should_escalate"] = True
+        updates["escalation_reason"] = (
+            state.get("escalation_reason")
+            or "Customer explicitly requested a human agent"
+        )
+
+    return {**state, **updates}
